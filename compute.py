@@ -22,23 +22,38 @@ For each input value, compute the transformed value:
 import sys
 
 def main():
+    # Check if the correct number of command line arguments are provided
     if len(sys.argv) != 3:
         print("Usage: compute.py <threshold> <limit>")
         sys.exit(1)
     
+    # Convert the command line arguments to float
     threshold = float(sys.argv[1])
     limit = float(sys.argv[2])
     
+    # Read numerical input values from standard input and convert them to a list of floats
     inputs = [float(line.strip()) for line in sys.stdin]
+
+    # Initialize an empty list to store output values
     outputs = []
+
     cumulative_sum = 0.0
     
     for value in inputs:
+        # Calculate the transformed value based on the threshold
         transformed_value = max(0.0, value - threshold)
+
+        # Ensure the cumulative sum does not exceed the limit
         if cumulative_sum + transformed_value > limit:
             transformed_value = limit - cumulative_sum
+
+        # Add the transformed value to the output list
         outputs.append(transformed_value)
+
+        # Update the cumulative sum
         cumulative_sum += transformed_value
+
+         # If the cumulative sum has reached the limit, stop processing further inputs
         if cumulative_sum >= limit:
             break
     
