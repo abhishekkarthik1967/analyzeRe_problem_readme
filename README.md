@@ -57,11 +57,23 @@ Standard output:
 
 ## Steps to Run the Program in Different Environments
 
+Create an `input.txt` file and copy the standard input format given in the problem statement. Then, execute the code using the following commands:
+
 ### Linux or MacOS
 ```sh
 cat input.txt | python3 compute.py 1000 20000000.0 (linux or MacOS)
+```
+
+### Windows
+```sh
 type input.txt | python compute.py 1000 20000000.0 (Windows)
 ```
+
+Make sure to replace `(linux or MacOS)` with the appropriate command for your operating system.
+
+After executing the code, you will get the output as described in the problem statement.
+
+Remember to save the `input.txt` file in the same directory as the `compute.py` script.
 
 ## Explanation of the Problem Statement
 
