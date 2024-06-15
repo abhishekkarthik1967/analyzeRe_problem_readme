@@ -6,12 +6,12 @@ Create an `input.txt` file and copy the standard input format given in the probl
 
 ### Linux or MacOS
 ```sh
-cat input.txt | python3 compute.py 1000 20000000.0 (linux or MacOS)
+cat input.txt | python3 compute.py 1000 20000000.0
 ```
 
 ### Windows
 ```sh
-type input.txt | python compute.py 1000 20000000.0 (Windows)
+type input.txt | python compute.py 1000 20000000.0
 
 ```
 ### Example
